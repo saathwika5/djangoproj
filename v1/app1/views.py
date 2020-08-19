@@ -1,10 +1,9 @@
-from django.shortcuts import render
 from django.http import HttpResponse
+from django.shortcuts import render
 import operator
-# Create your views here.
 def home(requests):
-    return HttpResponse('<h1>This is my page</h1>')
+   return render(requests,'app1/home.html',{'name' : 'sathwika'})
 def aboutus(requests):
-    return HttpResponse('<h1>I am a student in Vasavi</h1>')
+   return render(requests,'app1/about.html',{'userid' : 'narthaki'})
 def myhobbies(requests):
-    return HttpResponse('<h1>Dancing, singing are my hobbies</h1>')
+   return render(requests,'app1/hobbies.html')
